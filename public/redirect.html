@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>REDACTED</title>
+  </head>
+
+  <body>
+    <h1>Aguarde un momento, estamos validando sus datos</h1>
+    <script>
+      // Obtener el nombre de la ventana seteada por el parent para ser la key unica de request
+      const requestKey = window.name;
+      // Actualizar con la redirect URL la cual deberia contener ya code o un error para publicar
+      // El timeout solo para eviar el blinking confuso
+      setTimeout(function() {
+        window.localStorage.setItem(requestKey, window.location.href);
+        window.close();
+      }, 1000);
+    </script>
+  </body>
+</html>

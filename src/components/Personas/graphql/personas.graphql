@@ -1,0 +1,15 @@
+query personas($busqueda: String,$offset: Int) {
+  personas(busqueda: $busqueda, offset:$offset) {
+    id
+    numero
+    tipoDoc
+    email
+    tipoPersona
+    fechaNacimiento
+    profesion
+    nombre
+    apellido
+    nacionalidad
+    telefono
+  }
+}
